@@ -71,4 +71,4 @@ class AddNumber:
 a = AddNumber(1)
 b = AddNumber(2)
 c = a + b
-c.show()
+c.show() # 3
