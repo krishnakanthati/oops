@@ -72,3 +72,39 @@ a = AddNumber(1)
 b = AddNumber(2)
 c = a + b
 c.show() # 3
+
+
+print("===============================================================")
+class Node:
+    def __init__(self, name):
+        self.__name = name
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        self.__name = value
+
+    def __del__(self):
+        print(f"Deleting object with name: {self}")
+
+    @name.deleter
+    def name(self):
+        del self.__name
+
+node = Node("krishna")
+print(node.name)
+node.name = "rohan"
+print(node.name)
+del node.name
+print(node)
+# print(node.name)
+
+"""
+krishna
+rohan
+<__main__.Node object at 0x7ba46fe17190>
+Deleting object with name: <__main__.Node object at 0x7ba46fe17190>
+"""
