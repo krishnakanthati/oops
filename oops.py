@@ -58,6 +58,7 @@ print(subnode.info())
 print(SuperNode("Jack")._SuperNode__example)
 
 print("=================================================================")
+
 # Polymorphism
 
 class AddNumber:
